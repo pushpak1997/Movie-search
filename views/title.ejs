@@ -1,0 +1,45 @@
+<h1> About <%= data["Title"]%> !!!! </h1>
+<div>
+
+<img src="<%= data["Poster"]%>" alt="movie-poster" width="300" height="400" style="float:left;margin-right:40px;">
+
+<ul>
+  <li><b>Year</b> : <%= data["Year"]%></li>
+  <li><b>Realesed </b>: <%= data["Released"]%></li>
+  <li><b>Runtime </b>: <%= data["Runtime"]%></li>
+  <li><b>Genre </b> : <%= data["Genre"]%></li>
+  <li><b>Actors </b>: <%= data["Actors"]%></li>
+  <li><b>Director </b> : <%= data["Director"]%></li>
+  <li><b>Language </b>: <%= data["Language"]%></li>
+  <li><b>Plot </b>: <%= data["Plot"]%></li>
+  <li><b>imdbRating</b> : <%= data["imdbRating"]%></li>
+  <li><b>Type </b> : <%= data["Type"]%></li>
+</ul>
+<form action="/title" method="GET">
+	<input type="text" placeholder="type a movie name" name="search">
+	<input type="text" placeholder="released in" name="year">
+	<select name="plot" placeholder="Plot">
+	  <option value="short">short</option>
+	  <option value="full">full</option>
+	</select>
+	<select name="type" placeholder="Type">
+	  
+	  <option value="movie">movie</option>
+	  <option value="series">series</option>
+	  <option value="episode">episode</option>
+	</select>
+	<input type="submit">
+</form>
+
+<form action="/results" method="GET">
+	<input type="text" placeholder="search term" name="search">
+	<input type="text" placeholder="released in" name="year">
+	<select name="type" placeholder="Type">
+	  
+	  <option value="movie">movie</option>
+	  <option value="series">series</option>
+	  <option value="episode">episode</option>
+	</select>
+	<input type="submit">
+</form>
+</div>

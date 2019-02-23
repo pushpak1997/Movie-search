@@ -1,0 +1,30 @@
+<h1> Results Page!!!! </h1>
+<% data["Search"].forEach(function(movie){ %>
+	<li> <b><%= movie["Title"] %></b> (<%= movie["Year"]%>) (Type : <%=movie["Type"]%>) </li> 
+<%	}) %>
+<form action="/results" method="GET">
+	<input type="text" placeholder="search term" name="search">
+	<input type="text" placeholder="released in" name="year">
+	<select name="type" placeholder="Type">
+	  
+	  <option value="movie">movie</option>
+	  <option value="series">series</option>
+	  <option value="episode">episode</option>
+	</select>
+	<input type="submit">
+</form>
+<form action="/title" method="GET">
+	<input type="text" placeholder="type a movie name" name="search">
+	<input type="text" placeholder="released in" name="year">
+	<select name="plot" placeholder="Plot">
+	  <option value="short">short</option>
+	  <option value="full">full</option>
+	</select>
+	<select name="type" placeholder="Type">
+	  
+	  <option value="movie">movie</option>
+	  <option value="series">series</option>
+	  <option value="episode">episode</option>
+	</select>
+	<input type="submit">
+</form>
